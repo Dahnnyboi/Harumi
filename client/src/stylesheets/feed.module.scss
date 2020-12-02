@@ -1,0 +1,114 @@
+@import 'variables';
+
+.feedBody{
+  $width: 8.33%;
+  width: 100%;
+  margin-top: $p-1 * 5;
+  .container{
+    width: $width * 10;
+    margin: 0 auto;
+    display: flex;
+
+    .fill3{
+      width: $width * 3;
+    }
+
+    .fill5{
+      width: $width * 5;
+      .submits{
+        background-color: $darkest-color;
+        display: flex;
+        padding: $p-1;
+
+        margin-bottom: $p-1;
+        .profImg{
+          width: 20%;
+        }
+        
+        form{
+          width: 80%;
+
+          textarea{
+            resize: none;
+            display: block;
+            padding: 4px 8px;
+            width: 100%;
+            height: 80px;
+
+            &:focus{
+              outline: none;
+            }
+          }
+
+          input[type=submit]{
+            margin-top: $p-2;
+            float: right;
+
+            padding: 8px 16px;
+            border: none;
+            color: $white-color;
+            background-color: $mid-color;
+            text-transform: uppercase;
+            font-weight: $bold-weight;
+
+            cursor: pointer;
+          }
+        }
+      }
+
+      .bottom{
+        width: 100%;
+        margin-top: $p-1;
+        height: 20px;
+        background-color: $mid-color;
+      }
+    }
+
+    .fill4{
+      width: $width * 4;
+    }
+  }
+}
+
+@media(max-width: $media-tablet){
+  $width: 12.5%;
+
+  .feedBody{
+    .container{
+      .fill3{
+        width: $width * 3;
+      }
+
+      .fill5{
+        width: $width * 5;
+      }
+
+      .fill4{
+        width: 0;
+      }
+    }
+  }
+}
+
+@media(max-width: $media-phone-large){
+  $width: 8.33%;
+  $width-container: 25%;
+
+  .feedBody{
+    .container{
+      width: $width * 11;
+
+      .fill3{
+        width: 0;
+      }
+
+      .fill5{
+        width: $width-container * 4;
+      }
+
+      .fill4{
+        width: 0;
+      }
+    }
+  }
+}

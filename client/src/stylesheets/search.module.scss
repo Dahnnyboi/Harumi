@@ -1,0 +1,40 @@
+@import './variables';
+
+.container{
+  $width: 8.33%;
+  display: flex;
+  width: $width * 10;
+  margin: $p-1 * 4 auto $p-1 auto;
+  .fill3{
+    width: $width * 3;
+  }
+
+  .fill5{
+    width: $width * 5;
+
+    .noview{
+      background-color: $darkest-color;
+      color: $white-color;
+      text-align: center;
+      margin-top: $p-1;
+      padding: $p-1;
+    }
+
+    .view{
+      margin-top: $p-1;
+      width: 100%;
+      padding: $p-2 $p-1;
+      background-color: $darkest-color;
+      color: $white-color;
+      border: none;
+
+      outline: none;
+    }
+  }
+
+  .fill4{
+    width: $width * 4;
+  }
+}
+
+@import './medias/media_search'

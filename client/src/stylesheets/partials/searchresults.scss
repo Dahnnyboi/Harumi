@@ -1,0 +1,32 @@
+@import '../variables';
+
+.search-results{
+  margin-top: $p-1 * 1.4;
+  a{
+    text-decoration: none;
+    color: $black-color;
+
+    .user-info{
+      display: flex;
+      .profImg{
+        width: 36px;
+        margin-right: $p-2;
+
+        img{
+          width: 100%;
+          border-radius: 50%;
+          border: 2px solid $darkest-color;
+        }
+      }
+      .username{
+        p{ font-size: 14px;}
+      }
+    }
+  }
+
+  .isFollowing{
+    .intro{
+      margin-top: $p-2;
+    }
+  }
+}

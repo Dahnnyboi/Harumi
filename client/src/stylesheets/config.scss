@@ -1,0 +1,17 @@
+@import 'variables';
+
+@media(max-width: $media-tablet){
+  $normal-size: 18px;
+  $small-size: 16px;
+
+  h5{ font-size: $normal-size; }
+  p{ font-size: $small-size;}
+}
+
+@media(max-width: $media-phone-large){
+  $normal-size: 16px;
+  $small-size: 14px;
+
+  h5{ font-size: $normal-size; }
+  p{ font-size: $small-size;}
+}

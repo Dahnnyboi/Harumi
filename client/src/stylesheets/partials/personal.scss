@@ -1,0 +1,76 @@
+@import '../variables';
+
+.personal{
+  padding: $p-1;
+  color: $white-color;
+  hr{
+    width: 100%;
+    border-bottom: solid 1px $white-color;
+    margin-bottom: $p-2;
+  }
+
+  .loading{
+    color: $white-color;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    letter-spacing: $tertiary-spacing;
+    padding: $p-3;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: $p-2;
+  }
+
+  .response{
+    color: $white-color;
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    letter-spacing: $tertiary-spacing;
+    text-align: center;
+    margin-bottom: $p-2;
+  }
+
+  .bio{
+    textarea{
+      height: 68px;
+      resize: vertical;
+      width: 100%;
+
+      border-radius: 4px;
+      outline: none;
+      padding: $p-2;
+    }
+  }
+
+  .profile-image{
+    .contain {
+      position: relative;
+      width: 100%; /* The size you want */
+    }
+    .contain:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+    }
+    
+    .contain img {
+      position: absolute; /* Take your picture out of the flow */
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; /* Make the picture taking the size of it's parent */
+      width: 100%; /* This if for the object-fit */
+      height: 100%; /* This if for the object-fit */
+      object-fit: contain; /* Equivalent of the background-size: cover; of a background-image */
+      object-position: center;
+    }      
+
+    input[type=file]{
+      color: transparent;
+      width: 100%;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '../variables';
+
+@media(max-width: $media-tablet){
+  $width: 12.5%;
+  .settingsContainer{
+    .sideNav{
+      width: $width * 3;
+    }
+
+    .content{
+      width: $width * 5;
+    }
+  }
+}
+
+@media(max-width: $media-phone-large){
+  $width: 8.33%;
+  .settingsContainer{
+    flex-direction: column-reverse;
+    width: $width * 11;
+    .sideNav{
+      margin-top: $p-2;
+      width: 100%;
+    }
+    
+    .content{
+      width: 100%;
+    }
+  }
+}

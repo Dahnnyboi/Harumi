@@ -1,0 +1,31 @@
+@import '../variables';
+
+@media(max-width: $media-tablet){
+  $width: 12.5%;
+
+  .container{
+    .fill3{
+      width: $width * 3;
+    }
+    .fill5{
+      width: $width * 5;
+    }
+    .fill4{
+      width: 0;
+    }
+  }
+}
+
+@media(max-width: $media-phone-large){
+  .container{
+    .fill3{
+      width: 0;
+    }
+    .fill5{
+      width: 100%;
+    }
+    .fill4{
+      width: 0;
+    }
+  }
+}

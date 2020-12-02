@@ -1,0 +1,51 @@
+@import '../variables';
+
+.list-comments-container{
+  background-color: $darkest-color;
+  color: $white-color;
+  padding: $p-2 $p-1 $p-2 $p-1;
+
+  border-radius: 0 0 4px 4px;
+  
+  h5{
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .loading{
+    color: $white-color;
+  }
+
+  .view-comments{
+    cursor: pointer;
+    h4{
+      text-transform: uppercase;
+      letter-spacing: $tertiary-spacing;
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+
+  .comments-input{
+    margin-top: $p-2;
+    textarea{
+      border-radius: 4px;
+      width: 100%;
+      padding: $p-2;
+      resize: vertical;
+      outline: none;
+    }
+    
+    button{
+      float: right;
+      color: $white-color;
+    }
+
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+}

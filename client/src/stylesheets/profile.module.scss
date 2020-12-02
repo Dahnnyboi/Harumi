@@ -1,0 +1,120 @@
+@import 'variables';
+
+.container{
+  $width: 8.33%;
+  width: $width * 10;
+  margin: $p-1 * 5 auto $p-1 auto;
+
+
+  display: flex;
+  .userInfo{
+    width: $width * 3;
+    padding: $p-1 * 2;
+    .loadingUser{
+      width: 100%;
+      background-color: $mid-color;
+      color: $white-color;
+
+      height: 120px;
+    }
+
+    .showUser{
+      .image {
+        position: relative;
+        width: 100%; /* The size you want */
+      }
+      .image:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+      }
+      
+      .image img {
+        position: absolute; /* Take your picture out of the flow */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; /* Make the picture taking the size of it's parent */
+        width: 100%; /* This if for the object-fit */
+        height: 100%; /* This if for the object-fit */
+        object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+        object-position: center;
+
+        border-radius: 50%;
+        border: 2px solid $darkest-color;
+        cursor: pointer;
+      }
+      
+
+      .followersCount{
+        margin-bottom: $p-1;
+        color: $mute-color;
+      }
+
+      .bioContainer{
+        width: 100%;
+        background-color: $mid-color;
+        color: $white-color;
+        border-radius: 4px;
+        padding: $p-2 $p-2 $p-1 $p-2;
+
+        h4{
+          margin-bottom: $p-2;
+        }
+
+        p{
+          font-size: 14px;
+        }
+        
+        a{
+          color: $white-color;
+          text-decoration: underline;
+        }
+      }
+
+      .settings{
+        display: flex;
+        margin: $p-2;
+
+        img{
+          border: none;
+          width: 28px;
+          height: 28px;
+          margin-right: $p-2;
+        }
+      }
+    }
+  }
+
+  .userPosts{
+    width: $width * 5;
+    padding: $p-2;
+
+    .loading{
+      background-color: $darkest-color;
+      border-radius: 4px;
+      width: 100%;
+      height: 28px;
+      margin: $p-2 0;
+      h4{
+        color: $white-color;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+
+    .boundary{
+      width: 100%;
+      background-color: $white-color;
+      border-radius: 4px;
+    }
+  }
+
+  .userFollowing{
+    width: $width * 4;
+
+    
+  }
+}
+
+@import './medias/media_profile.scss';

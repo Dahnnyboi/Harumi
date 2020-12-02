@@ -1,0 +1,15 @@
+@import 'variables';
+
+.unauthorized{
+  margin-top: $p-1 * 5;
+  text-align: center;
+
+  h1{
+    font-size: 4rem;
+    line-height: 0.7;
+  }
+
+  h3{
+    text-transform: uppercase;
+  }
+}

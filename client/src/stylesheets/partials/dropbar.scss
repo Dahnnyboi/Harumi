@@ -1,0 +1,55 @@
+@import '../variables';
+
+.dropbody{
+  width: 100%;
+  background-color: $mid-color;
+  position: fixed;
+  top: 50px;
+  z-index: 1;
+  .container{
+    display: none;
+  }
+}
+
+@media(max-width: $media-tablet){
+  .dropbody{
+    .container{
+      display: block;
+      ul{
+        .search{
+          display: none;
+        }
+        
+        a{
+          color:$white-color;
+        }
+        li{
+          width: 100%;
+          list-style-type: none;
+          text-transform: uppercase;
+          color: $white-color;
+          padding: $p-2 0;
+          font-weight: $bold-weight;
+          text-align: center;
+  
+          cursor: pointer;
+          &:hover{
+            background-color: $dark-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: $media-phone-large){
+  .dropbody{
+    .container{
+      ul{
+        .search{
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import '../variables';
+
+.button{
+  padding: 8px 16px;
+  border: none;
+
+  font-weight: $bold-weight;
+  letter-spacing: $tertiary-spacing;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin: $p-3;
+  cursor: pointer;
+}
+
+.button-black{
+  @extend .button;
+  background-color: $black-color;
+  color: $white-color;
+}
+
+.button-white{
+  @extend .button;
+  background-color: $white-color;
+  color: $darkest-color;
+}
+
+.button-darkest{
+  @extend .button;
+  background-color: $darkest-color;
+  color: $white-color;
+}
+
+.button-dark{
+  @extend .button;
+  background-color: $dark-color;
+  color: $white-color;
+}
+
+.button-mid{
+  @extend .button;
+  background-color: $mid-color;
+  color: $white-color;
+}
+
+.button-light{
+  @extend .button;
+  background-color: $light-color;
+  color: $black-color;
+}
+
+.button-lightest{
+  @extend .button;
+  background-color: $darkest-color;
+  color: $black-color;
+}

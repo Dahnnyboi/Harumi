@@ -1,0 +1,34 @@
+@media(max-width: $media-tablet){
+  .signBody{
+    .content{
+      $width: 8.33%;
+      width: $width * 7;
+
+      h2{ font-size: 42px; }
+      .input{
+        margin-bottom: $p-2;
+      }
+    }
+  }
+}
+
+@media(max-width: $media-phone-large){
+  .signBody{
+    .content{
+      $width: 8.33%;
+      width: $width * 10;
+
+      
+      h2{ font-size: 36px; }
+    }
+  }
+}
+
+@media(max-width: $media-phone-small){
+  .signBody{
+    .content{
+      $width: 8.33%;
+      width: $width * 12;
+    }
+  }
+}

@@ -1,0 +1,156 @@
+@import '../variables';
+
+$width: 8.33%;
+
+.navbar{
+  width: 100%;
+  height: 50px;
+  background-color: $darkest-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  
+  .container{
+    width: $width * 10;
+    margin: 0 auto;
+    padding: 4px 0;
+    display: flex;
+    .logo-container{
+      width: $width * 3;
+
+      h2{
+        color: $white-color;
+        font-size: 32px;
+        font-family: $secondary-font;
+        letter-spacing: $tertiary-spacing;
+      }
+    }
+
+    .search-bar{
+      width: $width * 5;
+      margin-top: 6px;
+      
+      .search {
+        display: flex;
+        img{
+          width: 28px;
+          margin-right: $p-2;
+        }
+  
+        input[type=text]{
+          width: 100%;
+          height: 30px;
+          padding: 2px 4px;
+  
+          &:focus{
+            outline: none;
+          }
+        }
+      }
+      
+    }
+
+    .fill-bar{
+      width: $width * 2;
+    }
+
+    .user-bar{
+      width: $width * 2;
+      height: 100%;
+      display: flex;
+      margin-top: 5px;
+      
+      h5{
+        margin-top: 5px;
+        color: $white-color;
+        letter-spacing: $tertiary-spacing;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .user-profile{
+        a{
+          display: flex;
+          margin-right: $p-2;
+          img{ 
+            width: 28px;
+            margin-bottom: 20px;
+            margin-right: $p-2;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .dropdown{
+      display: none;
+    }
+  }
+}
+
+@media(max-width: $media-tablet){
+  $width: 12.5%;
+
+  .navbar{
+    .container{
+      .logo-container{
+        width: $width * 3;
+      }
+
+      .search-bar{
+        width: $width * 4
+      }
+      
+      .fill-bar{
+        width: 0;
+      }
+
+      .user-bar{
+        width: 0;
+        display: none;
+      }
+
+    
+      .dropdown{
+        width: $width * 1;
+        display: block;
+
+        img{
+          margin-top: 8px;
+          width: 24px;
+          float: right;
+
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: $media-phone-large){
+  $width: 8.33%;
+  $width-container: 25%;
+  .navbar{
+    .container{
+      width: $width * 11;
+
+      .logo-container{
+        width: $width-container * 3;
+      }
+
+      .search-bar{
+        display: none;
+        width: 0;
+      }
+
+      .dropdown{
+        width: $width-container * 1;
+
+        img{
+          width: 20px;
+        }
+      }
+    }
+  }
+}

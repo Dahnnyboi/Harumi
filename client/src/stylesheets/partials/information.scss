@@ -1,0 +1,88 @@
+@import '../variables';
+
+.information{
+  padding: $p-1;
+  color: $white-color;
+
+  hr{
+    width: 100%;
+    border-bottom: solid 1px $white-color;
+    margin-bottom: $p-1;
+  }
+
+  .valid {
+    color: red;
+    width: 100%;
+    background-color: $white-color;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    letter-spacing: $tertiary-spacing;
+    padding: $p-3;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: $p-2;
+  }
+
+  .loading{
+    color: $white-color;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    letter-spacing: $tertiary-spacing;
+    padding: $p-3;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: $p-2;
+  }
+
+  .response{
+    color: $white-color;
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    letter-spacing: $tertiary-spacing;
+    text-align: center;
+    margin-bottom: $p-2;
+  }
+
+  .email{
+    margin-bottom: $p-2;
+    p{
+      font-size: 12px;
+    }
+    input[type=email]{
+      padding: $p-2;
+      display: block;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      margin-top: $p-3;
+      margin-bottom: $p-2;
+      width: 100%;
+    }
+
+    button{
+      margin: 0;
+      outline: none;
+    }
+  }
+
+  .password{
+    input[type=password]{
+      padding: $p-2;
+      display: block;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      margin-top: $p-3;
+      margin-bottom: $p-2;
+      width: 100%;
+    }
+    
+    button{
+      margin: 0;
+    }
+  }
+}

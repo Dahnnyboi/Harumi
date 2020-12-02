@@ -1,0 +1,37 @@
+@import '../variables';
+
+.delete-container{
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.4);
+  overflow: auto;
+  position:fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  .modal-delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    text-align: center;
+
+    padding: $p-1;
+    margin: 15% auto;
+    width: 300px;
+    background-color: $white-color;
+    color: $black-color;
+
+    p{
+      margin-bottom: $p-2;
+    }
+
+    .inputs{
+      padding: $p-3;
+
+    }
+  }
+}

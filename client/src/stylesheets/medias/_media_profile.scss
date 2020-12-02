@@ -1,0 +1,36 @@
+@import '../variables';
+
+@media(max-width: $media-tablet){
+  $width: 12.5%;
+  .container{
+    .userInfo{
+      width: $width * 3;
+      padding: $p-1;
+    }
+
+    .userPosts{
+      width: $width * 5;
+    }
+    
+    .userFollowing{
+      width: 0;
+    }
+  }
+}
+
+@media(max-width: $media-phone-large){
+  $width: 25%;
+  .container{
+    $width-container: 8.33%;
+    width: $width-container * 11;
+    flex-direction: column;
+    .userInfo{
+      padding: $p-2;
+      width: 100%;
+    }
+
+    .userPosts{
+      width: 100%;
+    }
+  }
+}
