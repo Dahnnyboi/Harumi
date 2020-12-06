@@ -6,7 +6,6 @@ const app = express()
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
-require('dotenv').config()
 const corsOption = {
   "origin": "*",
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
