@@ -40,7 +40,7 @@ export const login = (usercreds) => {
   return dispatch => {
     dispatch(loginRequest())
 
-    return fetch('http://localhost:5000/api/users/login', config)
+    return fetch('/api/users/login', config)
       .then(response => { return response.json().then(json => ({json, response})) })
       .then(({json, response}) => {
         if(!response.ok){
@@ -113,7 +113,7 @@ export const fetchResources = () => {
 
       dispatch(fetchResourcesRequest())
       const username = localStorage.getItem('username')
-      fetch(`http://localhost:5000/api/users/${username}/resources`, config)
+      fetch(`/api/users/${username}/resources`, config)
         .then(response => { return response.json().then(json => ({ json, response})) })
         .then(({json, response}) => {
           if(!response.ok){
@@ -171,7 +171,7 @@ export function changeInfo(creds){
   return dispatch => {
     dispatch(putChangeInformation())
 
-    fetch(`http://localhost:5000/api/users/update`, config)
+    fetch(`/api/users/update`, config)
       .then(response => { return response.json().then(json => ({ json, response })) })
       .then(({json, response}) => {
         if(!response.ok){
@@ -228,7 +228,7 @@ export function changeProfile(photo){
   return dispatch => {
     dispatch(putChangeProfile())
 
-    axios.put(`http://localhost:5000/api/users/update`, formData, config)
+    axios.put(`/api/users/update`, formData, config)
       .then(response => {
         return response.data
       } )

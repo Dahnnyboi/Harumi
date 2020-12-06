@@ -64,7 +64,7 @@ export function fetchFeedPosts(page){
   return (dispatch) => {
     fetchingPost(true)
 
-    fetch(`http://localhost:5000/api/posts/feed?offset=${page}`, config)
+    fetch(`/api/posts/feed?offset=${page}`, config)
     .then(response => { return response.json().then(json => ({ json, response })) })
     .then(({json, response}) => {
       dispatch(fetchingPost(false))
@@ -104,7 +104,7 @@ export function fetchProfilePosts(name, page) {
   return (dispatch) => {
     fetchingProfilePosts(true)
 
-    fetch(`http://localhost:5000/api/posts/feed/${name}?offset=${page}`, config)
+    fetch(`/api/posts/feed/${name}?offset=${page}`, config)
     .then(response => { return response.json().then(json => ({ json, response })) })
     .then(({json, response}) => {
       dispatch(fetchingProfilePosts(false))
@@ -174,7 +174,7 @@ export function fetchDeletePost(slug){
 
   return dispatch => {
     dispatch(deletePostRequest())
-    fetch(`http://localhost:5000/api/posts/${slug}`, config)
+    fetch(`/api/posts/${slug}`, config)
     .then(response => { 
       if(response.status === 403){
         dispatch(deletePostFailure())
@@ -231,7 +231,7 @@ export function editPost(slug, index, input){
   return dispatch => {
     dispatch(editPostRequest())
 
-    fetch(`http://localhost:5000/api/posts/${slug}`, config)
+    fetch(`/api/posts/${slug}`, config)
       .then(response => { return response.json().then(json => ({ json, response})) })
       .then(({json, response}) => {
         if(!response.ok){
@@ -284,7 +284,7 @@ export function postFavorite(slug, index){
   return dispatch => {
     dispatch(favoPostRequest())
 
-    fetch(`http://localhost:5000/api/posts/${slug}/favorite`, config)
+    fetch(`/api/posts/${slug}/favorite`, config)
       .then(response => { return response.json().then(json => ({ json, response})) })
       .then(({json, response}) => {
         if(!response.ok){
@@ -335,7 +335,7 @@ export function postUnfavorite(slug, index){
   return dispatch => {
     dispatch(unfavoPostRequest())
 
-    fetch(`http://localhost:5000/api/posts/${slug}/unfavorite`, config)
+    fetch(`/api/posts/${slug}/unfavorite`, config)
       .then(response => { return response.json().then(json => ({ json, response})) })
       .then(({json, response}) => {
         if(!response.ok){
@@ -386,7 +386,7 @@ export function fetchComments(slug, offset, index){
   return dispatch => {
     dispatch(fetchCommentsRequest())
     
-    fetch(`http://localhost:5000/api/posts/${slug}/comments?offset=${offset}`, config)
+    fetch(`/api/posts/${slug}/comments?offset=${offset}`, config)
     .then(response => { return response.json().then(json => ({ json, response})) })
     .then(({json, response}) => {
       if(!response.ok){
@@ -440,7 +440,7 @@ export function postComment(comment, slug, index){
   return (dispatch, getState) => {
     dispatch(postCommentRequest())
 
-    fetch(`http://localhost:5000/api/posts/${slug}/comments`, config)
+    fetch(`/api/posts/${slug}/comments`, config)
       .then(response => { return response.json().then(json => ({ json, response})) })
       .then(({json, response}) => {
         if(!response.ok){
@@ -505,7 +505,7 @@ export function deleteComment(slug, postIndex, commentIndex, id){
   return dispatch => {
     dispatch(deleteCommentRequest())
 
-    fetch(`http://localhost:5000/api/posts/${slug}/comments/${id}`, config)
+    fetch(`/api/posts/${slug}/comments/${id}`, config)
       .then(response => { return response.json().then(json => ({ json, response})) })
       .then(({json, response}) => {
         if(!response.ok){

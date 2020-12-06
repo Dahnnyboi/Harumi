@@ -268,7 +268,6 @@ router.post('/:post/unfavorite', auth.required, function(req, res, next){
 
 // create a comment CHECKED
 router.post('/:post/comments', auth.required, function(req, res, next){
-  console.log(req.body)
   UserModel.findById(req.payload.id)
     .then(user => {
       if(!user){ return res.status(401).json({ message: `Cannot find the user ${user}`})}

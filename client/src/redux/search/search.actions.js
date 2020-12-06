@@ -32,7 +32,7 @@ export function searchNavbar(query){
   return dispatch => {
     dispatch(searchNavbarRequest())
 
-    fetch(`http://localhost:5000/api/users/search/${query}`, config)
+    fetch(`/api/users/search/${query}`, config)
       .then(response => { return response.json().then(json => ({ json, response})) })
       .then(({json, response}) => {
         if(!response.ok){
@@ -95,7 +95,7 @@ export function fetchSearch(username, page){
   return (dispatch) => {
     dispatch(requestSearchFetch())
 
-    fetch(`http://localhost:5000/api/users/search/feed/${username}?offset=${page}`, config)
+    fetch(`/api/users/search/feed/${username}?offset=${page}`, config)
       .then(response => { return response.json().then(json => ({ json, response})) })
       .then(({json, response}) => {
         if(!response.ok){
@@ -141,7 +141,7 @@ export function searchPost(username, index){
   return dispatch => {
     dispatch(requestSearchPost())
 
-    fetch(`http://localhost:5000/api/posts/${username}/post`, config)
+    fetch(`/api/posts/${username}/post`, config)
       .then(response => { return response.json().then(json => ({ json, response})) })
       .then(({json, response}) => {
         if(!response.ok){

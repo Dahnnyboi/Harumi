@@ -30,7 +30,7 @@ export function requestUser(username){
   return dispatch => {
     dispatch(requestUserProfile())
 
-    fetch(`http://localhost:5000/api/users/${username}`, config)
+    fetch(`/api/users/${username}`, config)
       .then(response => { return response.json().then(json => ({ json, response})) })
       .then(({json, response}) => {
         if(!response.ok){
@@ -85,7 +85,7 @@ export function followProfile(name){
   return dispatch => {
     dispatch(followProfileRequest())
 
-    fetch(`http://localhost:5000/api/profiles/${name}`, config)
+    fetch(`/api/profiles/${name}`, config)
       .then(response => { return response.json().then(json => ({ json, response})) })
       .then(({json, response}) => {
         if(!response.ok){
@@ -136,7 +136,7 @@ export function unfollowProfile(name){
   return dispatch => {
     dispatch(unfollowProfileRequest())
 
-    fetch(`http://localhost:5000/api/profiles/${name}`, config)
+    fetch(`/api/profiles/${name}`, config)
       .then(response => { return response.json().then(json => ({ json, response})) })
       .then(({json, response}) => {
         if(!response.ok){
